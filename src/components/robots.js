@@ -40,5 +40,5 @@ export const robots = [
         username: 'krama',
         email: 'krish@raman.com',
         
-    },
+    }
 ]
