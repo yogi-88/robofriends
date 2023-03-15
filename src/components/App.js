@@ -10,12 +10,18 @@ class App extends Component  {
     super();
     this.state = {
       robots: robots,
-      searchfields: ''
+      searchfield: ''
     }
   }
 
-  onSearchChange(event) {
+  onSearchChange = (event) =>  {
+    this.setState({searchfield: event.target.value})
     console.log(event.target.value)
+    const filteredRobots = this.state.robots.filter(robots=>{
+      return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+      
+    })
+    console.log(filteredRobots);
   }
   render(){
     return (
